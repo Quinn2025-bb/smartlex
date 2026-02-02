@@ -1,0 +1,9 @@
+
+{
+  "name": "SmartLex",
+  "description": "A high-end semantic analysis engine for mastering English nuances, metaphors, and cultural contexts using Gemini AI.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3B82F6;
+  --color-secondary: #EF4444;
+  --color-accent: #EAB308;
+  /* Added Yellow Accent */
+  --color-cta: #10B981;
+  --color-background-light: #FFFFFF;
+  --color-background-dark: #000000;
+
+  /* Override Tailwind v4 default oklch colors with Hex for html2canvas compatibility */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-200: #fecaca;
+  --color-red-300: #fca5a5;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+  --color-red-900: #7f1d1d;
+  --color-red-950: #450a0a;
+
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-technical: "Plus Jakarta Sans", sans-serif;
+
+  --radius-DEFAULT: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Comic Style Tokens */
+  --shadow-comic: 4px 4px 0px 0px #000000;
+  --shadow-comic-hover: 6px 6px 0px 0px #000000;
+  --shadow-comic-active: 2px 2px 0px 0px #000000;
+}
+
+/* Enable class-based dark mode */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Critical: Prevent window scroll, force internal scroll */
+  }
+
+  body {
+    @apply font-display text-[#121716] bg-background-light dark:bg-background-dark antialiased;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  /* gray-300 */
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+  /* gray-400 */
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  /* gray-600 */
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+  /* gray-500 */
+}
+
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1000px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1600px) {
+  .masonry-grid {
+    column-count: 4;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  aside,
+  header,
+  nav,
+  footer,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  main {
+    margin: 0 !important;
+    width: 100% !important;
+    border: none !important;
+    overflow: visible !important;
+  }
+
+  .custom-scrollbar {
+    overflow: visible !important;
+  }
+
+  #analysis-report {
+    padding: 0 !important;
+  }
+
+  .bg-primary,
+  .bg-cta {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  h1 {
+    font-size: 3rem !important;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Comic Book Utilities */
+.comic-border {
+  border: 3px solid #000000;
+}
+
+.comic-shadow {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.comic-shadow:hover {
+  box-shadow: 6px 6px 0px 0px #000000;
+  transform: translate(-2px, -2px);
+}
+
+.comic-shadow:active {
+  box-shadow: 2px 2px 0px 0px #000000;
+  transform: translate(2px, 2px);
+}
+
+.dark .comic-border {
+  border-color: #FFFFFF;
+}
+
+.dark .comic-shadow {
+  box-shadow: 4px 4px 0px 0px #FFFFFF;
+}
+
+.dark .comic-shadow:hover {
+  box-shadow: 6px 6px 0px 0px #FFFFFF;
+}
+
+.dark .comic-shadow:active {
+  box-shadow: 2px 2px 0px 0px #FFFFFF;
+}
