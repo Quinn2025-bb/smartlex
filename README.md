@@ -19,7 +19,8 @@ Paste a sentence → understand the word → save it into your personal knowledg
 
 ## 🖥 Demo
 
-(Screenshots here)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ad188717-4bdf-4957-bcc5-52599ef96a62" />
+
 
 ## ⚡ Quick Start
 
