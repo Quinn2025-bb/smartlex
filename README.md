@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# SmartLex
 
-# Run and deploy your AI Studio app
+SmartLex is a lightweight desktop app that helps you understand words in context and build your own knowledge base while learning.
 
-This contains everything you need to run your app locally.
+## ✨ Why SmartLex?
 
-View your app in AI Studio: https://ai.studio/apps/drive/1PFAc5eUbKDRJCrcDCkmOf0JIMgSfzUg7
+Traditional dictionaries explain words.
+SmartLex explains meaning **inside real sentences**.
 
-## Run Locally
+Paste a sentence → understand the word → save it into your personal knowledge system.
 
-**Prerequisites:**  Node.js
+## 🚀 Features
 
+- Context-aware word explanation
+- Paste full sentences for semantic understanding
+- Built-in AI assistant for deeper questions
+- Personal knowledge base construction
+- Lightweight desktop experience
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🖥 Demo
+
+(Screenshots here)
+
+## ⚡ Quick Start
+
+1. Download SmartLex
+2. Open the application
+3. Paste a sentence
+4. Explore explanations and save knowledge
+
+## 🎯 Use Cases
+
+- Language learning
+- Expression collection
+- Reading articles or papers
+- AI interaction
+
+## 🛠 Tech Stack
+
+- Desktop Application
+- AI-powered semantic analysis
+- Local knowledge storage
+
+## 🗺 Roadmap
+
+- [ ] Cloud sync
+- [ ] Multi-device support
+- [ ] Plugin system
+
+## 👤 Author
+
+Built by an independent developer exploring AI-native learning tools.
