@@ -42,11 +42,6 @@ Paste a sentence → understand the word → save it into your personal knowledg
 - AI-powered semantic analysis
 - Local knowledge storage
 
-## 🗺 Roadmap
-
-- [ ] Cloud sync
-- [ ] Multi-device support
-- [ ] Plugin system
 
 ## 👤 Author
 
